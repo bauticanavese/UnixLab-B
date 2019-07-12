@@ -4,11 +4,7 @@
 #include <stdbool.h>
 
 // Imprime el mensaje seguido de OK o ERROR y el número de línea. Contabiliza el
-// número total de errores en una variable interna. Ejemplo:
-//
-//    pila_t *p = pila_crear();
-//    print_test("La pila fue creada", p != NULL);
-//    print_test("La pila está vacía", pila_esta_vacia(p));
+// número total de errores en una variable interna.
 #define print_test(mensaje, result) do { \
     real_print_test(mensaje, result, __FILE__, __LINE__, #result); \
   } while (0)
