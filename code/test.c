@@ -47,7 +47,7 @@ void stat0_test() {
 	system("touch reg-file.txt");
 	// Salida correcta de stat
 	system("echo 'Size: 0' > stat-out");
-    system("echo 'File: reg-file.txt' >> stat-out");
+	system("echo 'File: reg-file.txt' >> stat-out");
 	system("echo 'Type: regular file' >> stat-out");
 	// Salida de neustro stat0
 	system("./stat0 reg-file.txt > stat0-out");
@@ -62,10 +62,10 @@ void stat0_test() {
 	system("echo 'hola' >> reg-file.txt");
 
 	system("echo 'Size: 5' > stat-out");
-    system("echo 'File: reg-file.txt' >> stat-out");
+	system("echo 'File: reg-file.txt' >> stat-out");
 	system("echo 'Type: regular file' >> stat-out");
-    
-    system("./stat0 reg-file.txt > stat0-out");
+	
+	system("./stat0 reg-file.txt > stat0-out");
 	system("diff stat0-out stat-out > stat-diff");
 
 	print_test("Prueba stat0 archivo regular con contenido", \
@@ -78,10 +78,10 @@ void stat0_test() {
 	system("mkdir teststat0/");
 	// Salida correcta de stat0
 	system("echo 'Size: 4096' > stat-out");
-    system("echo 'File: teststat0/' >> stat-out");
+	system("echo 'File: teststat0/' >> stat-out");
 	system("echo 'Type: directory' >> stat-out");
-    
-    system("./stat0 teststat0/ > stat0-out");
+	
+	system("./stat0 teststat0/ > stat0-out");
 	system("diff stat0-out stat-out > stat-diff");
 
 	print_test("Prueba stat0 con directorio", \
@@ -108,8 +108,8 @@ void cat0_test() {
 	// Test cat con archivo regular con contenido.
 	// ----------------------------------------------------
 	system("echo 'hola' > reg-file.txt");
-    
-    system("./cat0 reg-file.txt > cat0-out");
+	
+	system("./cat0 reg-file.txt > cat0-out");
 	system("diff reg-file.txt cat0-out > cat-diff");
 
 	print_test("Prueba stat0 archivo regular con contenido", \

@@ -10,5 +10,8 @@ cat0: fmanagment.o
 
 test: testing.o
 
+run-test: $(EXEC)
+	./test
+
 clean:
 	rm -f $(EXEC) *.o
